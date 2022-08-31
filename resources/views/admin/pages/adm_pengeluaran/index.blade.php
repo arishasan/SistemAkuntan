@@ -170,7 +170,7 @@
   $(function () {
     // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     $("#table").DataTable({
-      "responsive": true, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#table_wrapper .col-md-6:eq(0)');
 
     $('#table').on('click', '.delete', function(){
