@@ -47,7 +47,7 @@
               <div class="tab-content" id="custom-tabs-four-tabContent">
                 <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
 
-                <form action="{{ route('adm_pemasukan_filter') }}" method="POST">
+                <form action="{{ route('adm_jurnal_filter') }}" method="POST">
                     @csrf
                     <div class="card">
                         <div class="card-body">

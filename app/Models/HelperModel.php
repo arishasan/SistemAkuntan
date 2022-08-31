@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\AksesModel;
-use App\Models\RoleModel;
 use DateTime;
 
 class HelperModel extends Model
@@ -22,46 +21,7 @@ class HelperModel extends Model
                 'Admin'
             );
 
-            if(in_array(Auth()->user()->role, $array)){
-                return true;
-            }else{
-                return false;
-            }
-
-        }else if($modul == 'Transaksi'){
-
-            $array = array(
-                'Admin',
-                'Pembeli',
-            );
-
-            if(in_array(Auth()->user()->role, $array)){
-                return true;
-            }else{
-                return false;
-            }
-
-        }else if($modul == 'PO'){
-
-            $array = array(
-                'Admin',
-                'Supplier',
-            );
-
-            if(in_array(Auth()->user()->role, $array)){
-                return true;
-            }else{
-                return false;
-            }
-
-        }else if($modul == 'Laporan'){
-
-            $array = array(
-                'Admin',
-                'Pemilik',
-            );
-
-            if(in_array(Auth()->user()->role, $array)){
+            if(in_array(Auth()->user()->level, $array)){
                 return true;
             }else{
                 return false;

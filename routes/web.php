@@ -82,6 +82,7 @@ Route::group(['middleware' => 'auth'], function(){
 
 		// ADM JURNAL
 		Route::get('administrasi/jurnal', 'AdmJurnalController@index')->name('adm_jurnal');
+		Route::post('administrasi/jurnal', 'AdmJurnalController@index')->name('adm_jurnal_filter');
 		Route::get('administrasi/jurnal/get_trx/{tgl}', 'AdmJurnalController@get_trx_list');
 		Route::post('administrasi/jurnal/store', 'AdmJurnalController@store')->name('simpan-jurnal');
 		Route::get('administrasi/jurnal/detail/{id}', 'AdmJurnalController@detail');
