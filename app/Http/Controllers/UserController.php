@@ -82,7 +82,6 @@ class UserController extends Controller
                 $user = $data;
                 $user->nama = $req->nama;
                 $user->username = $req->username;
-                $user->level = $req->level;
                 
                 if($req->password == null || $req->password == ""){}else{
                     $user->password = Hash::make($req->password);
